@@ -1,7 +1,7 @@
 // swift-tools-version: 6.2
 import PackageDescription
 
-let tag: String = "0.1.0"
+let tag: String = "0.1.1"
 var url: String {
     let release: String = "https://github.com/ordo-one/distributed-system-sdk/releases/download/\(tag)"
     #if os(macOS)
@@ -12,9 +12,9 @@ var url: String {
 }
 var checksum: String {
     #if os(macOS)
-    "aa6bbad9dea16e40c70ba31e1b7bb23d489ea5ee0d0f693ed42575f64c8afdba"
+    "d66d757b3ac01e084d7e30bfa615420b9e609ffbe3d285c43826f6b8e70f64ee"
     #else
-    "6a3348577e690a3d6a850917773b8f017c752e90322c4dd2ded7ab6d7eb8269b"
+    "a88d70e66bf908540fbc13957470104033108df859a59ab8c14e42f6837144a7"
     #endif
 }
 
