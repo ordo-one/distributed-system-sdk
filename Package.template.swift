@@ -3,7 +3,7 @@ import PackageDescription
 
 let tag: String = "__TAG__"
 var url: String {
-    let release: String = "https://github.com/ordo-one/internal-distributed-system/releases/download/\(tag)"
+    let release: String = "https://github.com/ordo-one/distributed-system-sdk/releases/download/\(tag)"
     #if os(macOS)
     return "\(release)/DistributedABI-macOS.xcframework.zip"
     #else
@@ -19,7 +19,7 @@ var checksum: String {
 }
 
 let package: Package = .init(
-    name: "internal-distributed-system",
+    name: "distributed-system-sdk",
     products: [
         .library(name: "DistributedABI", targets: ["DistributedABI"])
     ],
