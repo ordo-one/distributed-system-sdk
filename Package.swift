@@ -3,16 +3,16 @@ import PackageDescription
 
 var url: String {
     #if os(macOS)
-    "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/362290272"
+    "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/362347690"
     #else
-    "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/362290273"
+    "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/362347691"
     #endif
 }
 var checksum: String {
     #if os(macOS)
-    "b883c4a9a87670e7841c1805b120792afd6fea1209c6c98e9cdcc5c900c25821"
+    "64e0b4d30170f3a65a9fccaece8122ec17772d348953039453fd9ae1a5eb9212"
     #else
-    "d02af3f289aeda28ad2864e1b37080cc0499f1c557610f44148f70e2588d0b01"
+    "8f6a68fe5e1c77956514ef2ad4c0781fa89cb88e9fea2f7a93f07f1957352f1b"
     #endif
 }
 
