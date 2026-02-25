@@ -22,6 +22,6 @@ let package: Package = .init(
         .library(name: "DistributedABI", targets: ["DistributedABI"])
     ],
     targets: [
-        .binaryTarget(name: "DistributedABI", url: url, checksum: checksum),
+        .binaryTarget(name: "DistributedABI", url: "\(url).zip", checksum: checksum),
     ]
 )
