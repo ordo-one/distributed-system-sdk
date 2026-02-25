@@ -2,13 +2,10 @@
 import PackageDescription
 
 var url: String {
-    let release: String = """
-    https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets
-    """
     #if os(macOS)
-    return "\(release)/__ASSET_ID_MACOS__.zip"
+    "__ASSET_URL_MACOS__"
     #else
-    return "\(release)/__ASSET_ID_LINUX__.zip"
+    "__ASSET_URL_LINUX__"
     #endif
 }
 var checksum: String {
