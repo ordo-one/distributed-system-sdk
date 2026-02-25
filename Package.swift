@@ -1,20 +1,18 @@
 // swift-tools-version: 6.2
 import PackageDescription
 
-let tag: String = "0.1.1"
 var url: String {
-    let release: String = "https://github.com/ordo-one/distributed-system-sdk/releases/download/\(tag)"
     #if os(macOS)
-    return "\(release)/DistributedABI-macOS.xcframework.zip"
+    "null"
     #else
-    return "\(release)/DistributedABI-Linux.xcframework.zip"
+    "null"
     #endif
 }
 var checksum: String {
     #if os(macOS)
-    "d66d757b3ac01e084d7e30bfa615420b9e609ffbe3d285c43826f6b8e70f64ee"
+    "60111543622a39e5d9b71096ca5bd9cc61e939d4756e4b7e49327c04c4450daa"
     #else
-    "a88d70e66bf908540fbc13957470104033108df859a59ab8c14e42f6837144a7"
+    "babbad9de27f2c628a7930bc84c0663855a190363c8975bbabae5a4a62e0b5dd"
     #endif
 }
 
