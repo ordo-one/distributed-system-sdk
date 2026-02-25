@@ -1,13 +1,14 @@
 // swift-tools-version: 6.2
 import PackageDescription
 
-let tag: String = "__TAG__"
 var url: String {
-    let release: String = "https://github.com/ordo-one/distributed-system-sdk/releases/download/\(tag)"
+    let release: String = """
+    https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets
+    """
     #if os(macOS)
-    return "\(release)/DistributedABI-macOS.xcframework.zip"
+    return "\(release)/__ASSET_ID_MACOS__.zip"
     #else
-    return "\(release)/DistributedABI-Linux.xcframework.zip"
+    return "\(release)/__ASSET_ID_LINUX__.zip"
     #endif
 }
 var checksum: String {
