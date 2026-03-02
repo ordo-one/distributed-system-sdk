@@ -51,7 +51,13 @@ var DistributedABI: Target {
     }
 
     if  let localSDK: String {
-        return .binaryTarget(name: "DistributedABI", path: localSDK)
+        let path: String
+        #if os(macOS)
+            path = "\(localSDK)/DistributedABI-macOS.xcframework"
+        #else
+            path = "\(localSDK)/DistributedABI-Linux.xcframework"
+        #endif
+        return .binaryTarget(name: "DistributedABI", path: path)
     } else {
 
         return .binaryTarget(name: "DistributedABI", url: "\(url).zip", checksum: checksum)
