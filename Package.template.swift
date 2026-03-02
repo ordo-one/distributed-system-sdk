@@ -46,7 +46,7 @@ var DistributedABI: Target {
         }
 
         // SPM only supports relative paths for local packages
-        let path: String = "\(String(repeating: "../", count: 100))\(ordo)/internal-distributed-system"
+        let path: String = "\(String.init(repeating: "../", count: 100))\(ordo)/internal-distributed-system"
         return path
     }
 
