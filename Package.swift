@@ -15,16 +15,16 @@ let package: Package = .init(
 var DistributedABI: Target {
     var url: String {
         #if os(macOS)
-        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/365597481"
+        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/365601150"
         #else
-        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/365597480"
+        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/365601149"
         #endif
     }
     var checksum: String {
         #if os(macOS)
-        "5361c19cea8d9f5bb51ace1744efdba5aa0368f45798157f9b7a416f61b05857"
+        "11339f74458f0257eb17937bbf21f1bb8edcb6a16fd6d1309d387b6aff9c1ed6"
         #else
-        "6b6ccb10157c646e0d23e2c38b329238f3987b9a82ae8a6130efab16c9d60b77"
+        "7304d3e68b8c05c3c9573263de9575d35146bd2e42936c81d66e6dfbed2a1001"
         #endif
     }
     var localSDK: String? {
@@ -51,7 +51,13 @@ var DistributedABI: Target {
     }
 
     if  let localSDK: String {
-        return .binaryTarget(name: "DistributedABI", path: localSDK)
+        let path: String
+        #if os(macOS)
+            path = "\(localSDK)/DistributedABI-macOS.xcframework"
+        #else
+            path = "\(localSDK)/DistributedABI-Linux.xcframework"
+        #endif
+        return .binaryTarget(name: "DistributedABI", path: path)
     } else {
 
         return .binaryTarget(name: "DistributedABI", url: "\(url).zip", checksum: checksum)
