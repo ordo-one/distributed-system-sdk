@@ -15,16 +15,16 @@ let package: Package = .init(
 var DistributedABI: Target {
     var url: String {
         #if os(macOS)
-        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/365580722"
+        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/365597481"
         #else
-        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/365580723"
+        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/365597480"
         #endif
     }
     var checksum: String {
         #if os(macOS)
-        "e8f4b8730463e3ae1bb7f0d20fd9d63f15e6b3b6961e05f5c2103874bf751703"
+        "5361c19cea8d9f5bb51ace1744efdba5aa0368f45798157f9b7a416f61b05857"
         #else
-        "d4cb9c9a7e2a69629e54490f03a8d4c80ef0e466aa15727a4e13033149b8fff7"
+        "6b6ccb10157c646e0d23e2c38b329238f3987b9a82ae8a6130efab16c9d60b77"
         #endif
     }
     var localSDK: String? {
@@ -45,7 +45,8 @@ var DistributedABI: Target {
             return ""
         }
 
-        let path: String = "\(ordo)/internal-distributed-system"
+        // SPM only supports relative paths for local packages
+        let path: String = "\(String.init(repeating: "../", count: 100))\(ordo)/internal-distributed-system"
         return path
     }
 
