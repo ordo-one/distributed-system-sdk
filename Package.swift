@@ -5,7 +5,7 @@ import Foundation
 let package: Package = .init(
     name: "distributed-system-sdk",
     products: [
-        .library(name: "DistributedABI", targets: ["DistributedABI"])
+        .library(name: "OrdoDistributedABI", targets: ["DistributedABI"])
     ],
     targets: [
         DistributedABI,
@@ -53,9 +53,9 @@ var DistributedABI: Target {
     if  let localSDK: String {
         let path: String
         #if os(macOS)
-            path = "\(localSDK)/DistributedABI-macOS.xcframework"
+            path = "\(localSDK)/OrdoDistributedABI-macOS.xcframework"
         #else
-            path = "\(localSDK)/DistributedABI-Linux.xcframework"
+            path = "\(localSDK)/OrdoDistributedABI-Linux.xcframework"
         #endif
         return .binaryTarget(name: "DistributedABI", path: path)
     } else {
