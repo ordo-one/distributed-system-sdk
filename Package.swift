@@ -15,16 +15,16 @@ let package: Package = .init(
 var DistributedABI: Target {
     var url: String {
         #if os(macOS)
-        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/405265197"
+        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/405780781"
         #else
-        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/405265196"
+        "https://api.github.com/repos/ordo-one/internal-distributed-system/releases/assets/405780780"
         #endif
     }
     var checksum: String {
         #if os(macOS)
-        "730e1475792f47261ffdb8c21e7871830f253fdd5d603de2256b24319ffc9c09"
+        "c54b582d97da9891c16757989d100a753c45f637083441a4bb27172a11d7763a"
         #else
-        "f0e22e91854ac9b10d090bd8c4a8f7a06ed3a264fec9eb7bef801baa00ea6cad"
+        "f4e4d9253a3dd246d9e747f9a831d4e478995fd940b55e9472953f4d0a334b0a"
         #endif
     }
     var localSDK: String? {
